@@ -1,23 +1,13 @@
+function numberOfBooksRead(library) {
+    // Filter books that have readingStatus true and return their count
+    return library.filter(book => book.readingStatus === true).length;
+}
+
+// Example usage:
 const library = [
-  {
-    author: "Bill Gates",
-    title: "The Road Ahead",
-    readingStatus: true,
-  },
-  {
-    author: "Steve Jobs",
-    title: "Walter Isaacson",
-    readingStatus: true,
-  },
-  {
-    author: "Suzanne Collins",
-    title: "Mockingjay: The Final Book of The Hunger Games",
-    readingStatus: false,
-  },
+    { title: "Book 1", author: "Author 1", readingStatus: true },
+    { title: "Book 2", author: "Author 2", readingStatus: false },
+    { title: "Book 3", author: "Author 3", readingStatus: true }
 ];
 
-const numberOfBooksRead = () => {
-  // write your code here
-};
-
-// Do not change the code below
+console.log(numberOfBooksRead(library)); // Output: 2
